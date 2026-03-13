@@ -24,6 +24,20 @@
     --border: rgba(13,148,136,0.15);
   }
 
+  /* Accessibility: high-contrast overrides */
+  .hero-eyebrow,
+  .section-eyebrow,
+  .pw-header .section-eyebrow,
+  .oferta-header .section-eyebrow,
+  .o-mnie-content .section-eyebrow,
+  .faq-header .section-eyebrow,
+  .kontakt-info .section-eyebrow {
+    background: var(--green) !important;
+    color: #fff !important;
+  }
+
+  .hero-eyebrow::before { background: #fff !important; }
+
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   html { scroll-behavior: smooth; }
@@ -526,11 +540,11 @@
     margin-top: 0.8rem;
     font-size: 0.78rem;
     font-weight: 600;
-    color: var(--green);
+    color: var(--green-dark);
     letter-spacing: 0.03em;
   }
 
-  .oferta-link svg { width: 14px; height: 14px; stroke: var(--green); fill: none; stroke-width: 2.5; stroke-linecap: round; transition: transform 0.2s; }
+  .oferta-link svg { width: 14px; height: 14px; stroke: var(--green-dark); fill: none; stroke-width: 2.5; stroke-linecap: round; transition: transform 0.2s; }
   .oferta-card:hover .oferta-link svg { transform: translateX(4px); }
 
   @media (max-width: 960px) {
@@ -606,7 +620,7 @@
     line-height: 1.75;
   }
 
-  .o-mnie-doswiadczenie h4 {
+  .o-mnie-doswiadczenie h3 {
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -900,7 +914,7 @@
     padding: 1.5rem;
   }
 
-  .kontakt-godziny h4 {
+  .kontakt-godziny h3 {
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -919,7 +933,7 @@
   }
 
   .godziny-row:last-child { border-bottom: none; }
-  .godziny-row span:last-child { color: var(--text-muted); }
+  .godziny-row span:last-child { color: #3d4a5c; }
 
   /* Map full width */
   .kontakt-map {
@@ -1136,6 +1150,7 @@
 </style>
 </head>
 <body>
+<a href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:999;background:var(--green);color:#fff;padding:10px 20px;border-radius:0 0 8px 0;font-weight:600;font-size:0.9rem;" onFocus="this.style.left='0';this.style.width='auto';this.style.height='auto';" onBlur="this.style.left='-9999px';">Przejdź do treści</a>
 
 <!-- ══════════════ HEADER ══════════════ -->
 <header id="header">
@@ -1277,6 +1292,7 @@
   </div>
 </section>
 
+<main id="main-content">
 <!-- ══════════ SEO TEXT BLOCK ══════════ -->
 <section style="padding:3rem 5rem; background:#fff; border-top:1px solid var(--border);" aria-label="Fizjoterapia Warszawa Wola">
   <div style="max-width:900px; margin:0 auto;">
@@ -1421,7 +1437,7 @@
       <p>Jestem certyfikowanym fizjoterapeutą z ponad 5-letnim doświadczeniem klinicznym. Prowadzę gabinet fizjoterapii na warszawskiej Woli, przy ul. św. Stanisława 1. Specjalizuję się w terapii manualnej, rehabilitacji narządu ruchu oraz leczeniu bólu przewlekłego. Przyjmuję pacjentów z Woli, Śródmieścia, Żoliborza i całej Warszawy. Moim celem jest nie tylko zniwelowanie bólu, ale przede wszystkim znalezienie i wyeliminowanie jego przyczyny, abyś mógł wrócić do pełnej sprawności.</p>
 
       <div class="o-mnie-doswiadczenie">
-        <h4>Doświadczenie</h4>
+        <h3 style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--green);margin-bottom:1rem;">Doświadczenie</h3>
         <div class="doswiadczenie-list">
 
           <div class="doswiadczenie-item">
@@ -1595,7 +1611,7 @@
 
     <!-- Prawa: godziny -->
     <div class="kontakt-godziny">
-      <h4>Godziny przyjęć</h4>
+      <h3 style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);margin-bottom:1rem;">Godziny przyjęć</h3>
       <div class="godziny-row"><span>Poniedziałek</span><span>08:00 – 12:00</span></div>
       <div class="godziny-row"><span>Wtorek</span><span>08:00 – 21:00</span></div>
       <div class="godziny-row"><span>Środa</span><span>08:00 – 19:00</span></div>
@@ -1626,6 +1642,7 @@
 
 </section>
 
+</main>
 <!-- ══════════════ FOOTER ══════════════ -->
 <footer>
   <div class="footer-social">
