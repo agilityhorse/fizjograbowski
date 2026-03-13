@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Fizjoterapia Warszawa Wola. Leczenie bólu kręgosłupa, rwy kulszowej, barku i kolana. Ponad 5 lat doświadczenia. Umów wizytę u fizjoterapeuty.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Fizjoterapia Warszawa Wola – terapia manualna | Artur Grabowski">
+<meta property="og:description" content="Gabinet fizjoterapii na Woli w Warszawie. Terapia manualna, masaż leczniczy, fala uderzeniowa. Umów wizytę.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fizjoterapia-grabowski.pl">
+<link rel="canonical" href="https://fizjoterapia-grabowski.pl">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<title>Fizjoterapia Warszawa Wola – terapia manualna | Artur Grabowski</title>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600;700;800&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white: #E3F0ED;
+    --green: #0D9488;
+    --green-dark: #0a7a6e;
+    --green-light: #e0f5f3;
+    --black: #020617;
+    --text-muted: #4a5568;
+    --border: rgba(13,148,136,0.15);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Geist', sans-serif;
+    background: var(--white);
+    color: var(--black);
+    overflow-x: hidden;
+  }
+
+  /* ── HEADER ─────────────────────────────────────────── */
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(227,240,237,0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: box-shadow 0.3s;
+  }
+
+  header.scrolled { box-shadow: 0 2px 24px rgba(13,148,136,0.10); }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .logo-mark {
+    width: 42px; height: 42px;
+    background: var(--green);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .logo-mark svg { width: 24px; height: 24px; fill: var(--white); }
+
+  .logo-text { line-height: 1.15; }
+  .logo-text strong {
+    display: block;
+    font-family: 'Funnel Display', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: 0.01em;
+  }
+  .logo-text span {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--green);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  nav { display: flex; align-items: center; gap: 0.2rem; }
+
+  nav a {
+    display: flex; align-items: center; gap: 6px;
+    padding: 8px 13px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.83rem;
+    font-weight: 500;
+    color: var(--black);
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+    letter-spacing: 0.01em;
+  }
+  nav a:hover { background: var(--green-light); color: var(--green); }
+  nav a svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+  .nav-cta {
+    margin-left: 0.6rem;
+    background: var(--green) !important;
+    color: var(--white) !important;
+    padding: 9px 18px !important;
+    font-weight: 600 !important;
+    border-radius: 8px;
+    transition: background 0.2s, transform 0.15s !important;
+  }
+  .nav-cta:hover { background: var(--green-dark) !important; transform: translateY(-1px); }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 6px;
+    background: none;
+    border: none;
+  }
+  .hamburger span {
+    display: block; width: 22px; height: 2px;
+    background: var(--black);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  /* ── HERO ─────────────────────────────────────────────── */
+  .hero {
+    min-height: 100vh;
+    padding: 68px 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg-dots {
+    position: absolute;
+    top: 0; left: 0; width: 50%; bottom: 0;
+    background-image: radial-gradient(circle, rgba(13,148,136,0.07) 1px, transparent 1px);
+    background-size: 28px 28px;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .hero-left {
+    position: relative; z-index: 1;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 2.5rem 2.5rem 2.5rem 4rem;
+    background: var(--white);
+  }
+
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--green-light);
+    color: var(--green);
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.9rem;
+    width: fit-content;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.4); }
+  }
+
+  .hero-title {
+    font-family: 'Funnel Display', sans-serif;
+    font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.12;
+    color: var(--black);
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-title em {
+    font-style: normal;
+    color: var(--green);
+    position: relative;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.01em;
+  }
+
+  /* ── COMPLAINTS GRID ─────────────────────────────────── */
+  .complaints-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7px;
+    margin: 0.8rem 0 1rem;
+  }
+
+  .complaint-tag {
+    display: flex; align-items: center; gap: 8px;
+    padding: 8px 11px;
+    background: #fff;
+    border: 1.5px solid var(--border);
+    border-radius: 9px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--black);
+    cursor: default;
+    transition: border-color 0.2s, background 0.2s, transform 0.18s;
+  }
+
+  .complaint-tag:hover {
+    border-color: var(--green);
+    background: var(--green-light);
+    transform: translateY(-2px);
+  }
+
+  .complaint-tag .ct-dot {
+    width: 8px; height: 8px;
+    background: var(--green);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .hero-urgent {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+    border-left: 3px solid var(--green);
+    padding-left: 12px;
+  }
+
+  .hero-urgent strong { color: var(--black); }
+
+  .hero-btns {
+    display: flex; gap: 10px; flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--green);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.88rem;
+    letter-spacing: 0.02em;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 16px rgba(13,148,136,0.28);
+  }
+
+  .btn-primary:hover {
+    background: var(--green-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(13,148,136,0.35);
+  }
+
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent;
+    color: var(--black);
+    padding: 12px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.88rem;
+    border: 1.5px solid rgba(2,6,23,0.18);
+    transition: border-color 0.2s, color 0.2s, transform 0.15s;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--green);
+    color: var(--green);
+    transform: translateY(-2px);
+  }
+
+  /* ── HERO RIGHT — PHOTO PANEL ──────────────────────────── */
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+    min-height: 100%;
+  }
+
+  .hero-photo {
+    position: absolute;
+    inset: 0;
+    background: var(--black);
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* When a real photo is supplied, replace background-image here */
+  .hero-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  /* Overlay tint so future photo blends nicely */
+  .hero-photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(2,6,23,0.18) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* Placeholder graphic shown until real photo is added */
+  .hero-photo-placeholder {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 14px;
+    color: rgba(227,240,237,0.55);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .hero-photo-placeholder svg {
+    width: 64px; height: 64px;
+    opacity: 0.4;
+  }
+
+  /* Floating badge bottom-left of photo */
+  .hero-float-badge {
+    position: absolute;
+    bottom: 32px; left: 28px;
+    background: rgba(227,240,237,0.97);
+    border-radius: 14px;
+    padding: 12px 16px;
+    display: flex; align-items: center; gap: 10px;
+    box-shadow: 0 8px 30px rgba(2,6,23,0.18);
+    animation: fadeUp 0.7s 0.8s both;
+    z-index: 2;
+  }
+
+  .fbl-icon {
+    width: 36px; height: 36px;
+    background: var(--green);
+    border-radius: 9px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .fbl-icon svg { width: 18px; height: 18px; fill: var(--white); }
+
+  .fbl-text strong { display: block; font-size: 0.8rem; font-weight: 600; color: var(--black); }
+  .fbl-text span   { font-size: 0.68rem; color: var(--text-muted); }
+
+  /* Floating badge top-right of photo */
+  .hero-float-badge2 {
+    position: absolute;
+    top: 40px; right: 28px;
+    background: var(--green);
+    border-radius: 14px;
+    padding: 10px 16px;
+    display: flex; align-items: center; gap: 9px;
+    box-shadow: 0 8px 24px rgba(13,148,136,0.4);
+    animation: fadeUp 0.7s 1s both;
+    z-index: 2;
+  }
+
+  .fbl2-num {
+    font-family: 'Funnel Display', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .fbl2-text { display: flex; flex-direction: column; }
+  .fbl2-text strong { font-size: 0.72rem; font-weight: 600; color: var(--white); letter-spacing: 0.04em; text-transform: uppercase; }
+  .fbl2-text span   { font-size: 0.65rem; color: rgba(227,240,237,0.75); }
+
+  /* ── PLACEHOLDER SECTIONS ────────────────────────────── */
+  .section-placeholder {
+    padding: 5rem 5rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+
+  .section-placeholder h2 {
+    font-family: 'Funnel Display', sans-serif;
+    font-size: 2rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .section-placeholder p { color: var(--text-muted); font-size: 0.9rem; }
+
+  /* ── OFERTA ──────────────────────────────────────────── */
+  .oferta {
+    padding: 5rem;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+  }
+
+  .oferta-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .oferta-header .section-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--green-light);
+    color: var(--green);
+    padding: 5px 14px;
+    border-radius: 30px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .oferta-header h2 {
+    font-family: 'Funnel Display', sans-serif;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.15;
+  }
+
+  .oferta-header h2 em { font-style: normal; color: var(--green); }
+
+  .oferta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .oferta-card {
+    background: #fff;
+    border: 1.5px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
+    cursor: pointer;
+  }
+
+  .oferta-card:hover {
+    box-shadow: 0 12px 40px rgba(13,148,136,0.14);
+    transform: translateY(-5px);
+    border-color: var(--green);
+  }
+
+  .oferta-img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: #c8e6e3;
+    position: relative;
+  }
+
+  .oferta-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(13,148,136,0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(13,148,136,0.08) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  /* When real photo: <img src="..." /> inside .oferta-img */
+  .oferta-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .oferta-body {
+    padding: 1.4rem 1.5rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+  }
+
+  .oferta-card h3 {
+    font-family: 'Funnel Display', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.25;
+  }
+
+  .oferta-card p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  .oferta-link {
+    display: inline-flex; align-items: center; gap: 5px;
+    margin-top: 0.8rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--green);
+    letter-spacing: 0.03em;
+  }
+
+  .oferta-link svg { width: 14px; height: 14px; stroke: var(--green); fill: none; stroke-width: 2.5; stroke-linecap: round; transition: transform 0.2s; }
+  .oferta-card:hover .oferta-link svg { transform: translateX(4px); }
+
+  @media (max-width: 960px) {
+    .oferta-grid { grid-template-columns: repeat(2, 1fr); }
+    .oferta { padding: 4rem 2rem; }
+  }
+  @media (max-width: 520px) {
+    .oferta-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── O MNIE ──────────────────────────────────────────── */
+  .o-mnie {
+    padding: 5rem;
+    background: #fff;
+    border-top: 1px solid var(--border);
+  }
+
+  .o-mnie-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .o-mnie-photo {
+    aspect-ratio: 3/4;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #c8e6e3;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .o-mnie-photo::after { display: none; }
+
+  .o-mnie-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  .o-mnie-content { display: flex; flex-direction: column; gap: 1.5rem; }
+
+  .o-mnie-content .section-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--green-light);
+    color: var(--green);
+    padding: 5px 14px;
+    border-radius: 30px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    width: fit-content;
+  }
+
+  .o-mnie-content h2 {
+    font-family: 'Funnel Display', sans-serif;
+    font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.1;
+  }
+
+  .o-mnie-content h2 em { font-style: normal; color: var(--green); }
+
+  .o-mnie-content p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+  }
+
+  .o-mnie-doswiadczenie h4 {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 1rem;
+  }
+
+  .doswiadczenie-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .doswiadczenie-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .doswiadczenie-item:hover {
+    border-color: var(--green);
+    background: var(--green-light);
+  }
+
+  .doswiadczenie-item .di-dot {
+    width: 8px; height: 8px;
+    background: var(--green);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+
+  .doswiadczenie-item .di-text strong {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--black);
+    line-height: 1.3;
+  }
+
+  .doswiadczenie-item .di-text span {
+    font-size: 0.76rem;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 860px) {
+    .o-mnie-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .o-mnie-photo { aspect-ratio: 4/3; max-width: 400px; }
+    .o-mnie { padding: 4rem 2rem; }
+  }
+
+  /* ── FAQ ─────────────────────────────────────────────── */
+  .faq {
+    padding: 5rem;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+  }
+
+  .faq-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .faq-header .section-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--green-light);
+    color: var(--green);
+    padding: 5px 14px;
+    border-radius: 30px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .faq-header h2 {
+    font-family: 'Funnel Display', sans-serif;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.15;
+  }
+
+  .faq-header h2 em { font-style: normal; color: var(--green); }
+
+  .faq-list {
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .faq-item {
+    border-bottom: 1.5px solid var(--border);
+  }
+
+  .faq-item:first-child {
+    border-top: 1.5px solid var(--border);
+  }
+
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.4rem 0;
+    text-align: left;
+  }
+
+  .faq-question span {
+    font-family: 'Funnel Display', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--black);
+    line-height: 1.3;
+  }
+
+  .faq-icon {
+    width: 28px; height: 28px;
+    background: var(--green-light);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s, transform 0.3s;
+  }
+
+  .faq-icon svg {
+    width: 14px; height: 14px;
+    stroke: var(--green);
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    transition: transform 0.3s;
+  }
+
+  .faq-item.open .faq-icon {
+    background: var(--green);
+    transform: rotate(180deg);
+  }
+
+  .faq-item.open .faq-icon svg { stroke: var(--white); }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.3s ease;
+  }
+
+  .faq-answer p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+    padding-bottom: 1.4rem;
+  }
+
+  .faq-footer {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .faq { padding: 4rem 2rem; }
+  }
+
+  /* ── KONTAKT ─────────────────────────────────────────── */
+  .kontakt {
+    border-top: 1px solid var(--border);
+    background: #fff;
+  }
+
+  .kontakt-top {
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .kontakt-info .section-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--green-light);
+    color: var(--green);
+    padding: 5px 14px;
+    border-radius: 30px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .kontakt-info h2 {
+    font-family: 'Funnel Display', sans-serif;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+
+  .kontakt-info h2 em { font-style: normal; color: var(--green); }
+
+  .kontakt-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .kontakt-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .kontakt-row-icon {
+    width: 38px; height: 38px;
+    background: var(--green-light);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .kontakt-row-icon svg {
+    width: 18px; height: 18px;
+    stroke: var(--green);
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .kontakt-row-text strong {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 2px;
+  }
+
+  .kontakt-row-text span {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+  }
+
+  .btn-call {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--green);
+    color: var(--white);
+    padding: 15px 32px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.01em;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(13,148,136,0.3);
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-call:hover {
+    background: var(--green-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(13,148,136,0.38);
+  }
+
+  .btn-call svg {
+    width: 20px; height: 20px;
+    fill: var(--white);
+  }
+
+  .kontakt-godziny {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    padding: 1.5rem;
+  }
+
+  .kontakt-godziny h4 {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 1rem;
+  }
+
+  .godziny-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.83rem;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--black);
+  }
+
+  .godziny-row:last-child { border-bottom: none; }
+  .godziny-row span:last-child { color: var(--text-muted); }
+
+  /* Map full width */
+  .kontakt-map {
+    width: 100%;
+    height: 380px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .kontakt-map iframe {
+    width: 100%; height: 100%;
+    border: none;
+    display: block;
+    filter: grayscale(20%) contrast(1.05);
+  }
+
+  .map-btn-wrap {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  .btn-map {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--white);
+    color: var(--black);
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 20px rgba(2,6,23,0.18);
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+  }
+
+  .btn-map:hover { background: var(--green-light); transform: translateY(-2px); }
+  .btn-map svg { width: 16px; height: 16px; stroke: var(--green); fill: none; stroke-width: 2; stroke-linecap: round; }
+
+  @media (max-width: 860px) {
+    .kontakt-top { grid-template-columns: 1fr; padding: 3rem 2rem; gap: 2rem; }
+    .kontakt-map { height: 300px; }
+  }
+
+  /* ── FOOTER ──────────────────────────────────────────── */
+  footer {
+    background: var(--black);
+    color: rgba(227,240,237,0.5);
+    text-align: center;
+    padding: 2rem 2rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  footer span { color: var(--green); }
+
+  .footer-social {
+    display: flex;
+    gap: 12px;
+  }
+
+  .footer-social a {
+    width: 38px; height: 38px;
+    border-radius: 10px;
+    border: 1px solid rgba(227,240,237,0.15);
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .footer-social a:hover { background: var(--green); border-color: var(--green); }
+  .footer-social svg { width: 18px; height: 18px; fill: none; stroke: rgba(227,240,237,0.6); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.2s; }
+  .footer-social a:hover svg { stroke: var(--white); }
+
+  /* ── MOBILE ──────────────────────────────────────────── */
+  @media (max-width: 960px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-left { padding: 4rem 2rem 3rem; }
+    .hero-right { display: none; }
+  }
+
+  @media (max-width: 768px) {
+    nav { display: none; position: fixed; top: 68px; left: 0; right: 0; background: var(--white); flex-direction: column; padding: 1rem; gap: 4px; border-bottom: 1px solid var(--border); box-shadow: 0 8px 24px rgba(2,6,23,0.08); }
+    nav.open { display: flex; }
+    nav a { width: 100%; justify-content: flex-start; padding: 11px 14px; }
+    .nav-cta { margin-left: 0; }
+    .hamburger { display: flex; }
+    .complaints-grid { grid-template-columns: 1fr 1fr; }
+    .hero-left { padding: 3rem 1.4rem 3rem; }
+    .section-placeholder { padding: 3rem 1.5rem; }
+  }
+
+  @media (max-width: 420px) {
+    .complaints-grid { grid-template-columns: 1fr; }
+    .hero-btns { flex-direction: column; }
+    .btn-primary, .btn-secondary { justify-content: center; }
+  }
+
+  /* ── SCROLL ANIMATIONS ───────────────────────────────── */
+  .hero-eyebrow, .hero-title, .hero-subtitle,
+  .complaints-grid, .hero-urgent, .hero-btns {
+    opacity: 0;
+    transform: translateY(22px);
+    animation: fadeUp 0.65s forwards;
+  }
+  .hero-eyebrow   { animation-delay: 0.1s; }
+  .hero-title     { animation-delay: 0.22s; }
+  .hero-subtitle  { animation-delay: 0.34s; }
+  .complaints-grid { animation-delay: 0.44s; }
+  .hero-urgent    { animation-delay: 0.56s; }
+  .hero-btns      { animation-delay: 0.66s; }
+
+  .hero-card-main { animation: fadeUp 0.7s 0.3s both; }
+
+  /* ── PIERWSZA WIZYTA ─────────────────────────────────── */
+  .pierwsza-wizyta {
+    padding: 5rem 5rem;
+    background: #fff;
+    border-top: 1px solid var(--border);
+  }
+
+  .pw-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .pw-header .section-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--green-light);
+    color: var(--green);
+    padding: 5px 14px;
+    border-radius: 30px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .pw-header h2 {
+    font-family: 'Funnel Display', sans-serif;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.15;
+  }
+
+  .pw-header h2 em {
+    font-style: normal;
+    color: var(--green);
+  }
+
+  .pw-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .pw-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+    padding: 1.5rem 1rem;
+    position: relative;
+  }
+
+  .pw-icon {
+    width: 56px; height: 56px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .pw-icon svg {
+    width: 48px; height: 48px;
+    fill: none;
+    stroke: var(--green);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .pw-card h3 {
+    font-family: 'Funnel Display', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.2;
+  }
+
+  .pw-card p {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 960px) {
+    .pw-grid { grid-template-columns: repeat(2, 1fr); }
+    .pierwsza-wizyta { padding: 4rem 2rem; }
+  }
+
+  @media (max-width: 520px) {
+    .pw-grid { grid-template-columns: 1fr; }
+  }
+
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════ HEADER ══════════════ -->
+<header id="header">
+  <a href="#" class="logo" aria-label="Strona główna">
+<div class="logo-text">
+      <strong>Artur Grabowski</strong>
+      <span>Fizjoterapia</span>
+    </div>
+  </a>
+
+  <nav id="nav">
+    <!-- Home icon -->
+    <a href="#" aria-label="Strona główna">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9L12 2l9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+    </a>
+    <a href="#pierwsza-wizyta">Pierwsza wizyta</a>
+    <a href="#oferta">Oferta</a>
+    <a href="#o-mnie">O mnie</a>
+    <a href="#faq">FAQ</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="#kontakt" class="nav-cta">Umów się</a>
+  </nav>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero" id="strona-glowna">
+  <div class="hero-bg-dots"></div>
+
+  <div class="hero-left">
+    <div class="hero-eyebrow">Profesjonalny fizjoterapeuta w Warszawie</div>
+
+    <h1 class="hero-title">Czy któreś z tych<br>schorzeń dotyczy<br><em>Ciebie?</em></h1>
+    <!-- SEO H1 hidden visually but readable -->
+
+
+
+    <div class="complaints-grid">
+
+      <div class="complaint-tag">
+        <span class="ct-dot"></span>
+        Bóle kręgosłupa
+      </div>
+
+      <div class="complaint-tag">
+        <span class="ct-dot"></span>
+        Rwa kulszowa
+      </div>
+
+      <div class="complaint-tag">
+        <span class="ct-dot"></span>
+        Ból barku
+      </div>
+
+      <div class="complaint-tag">
+        <span class="ct-dot"></span>
+        Ból kolana
+      </div>
+
+      <div class="complaint-tag">
+        <span class="ct-dot"></span>
+        Ból biodra
+      </div>
+
+      <div class="complaint-tag">
+        <span class="ct-dot"></span>
+        Dyskopatia
+      </div>
+
+      <div class="complaint-tag">
+        <span class="ct-dot"></span>
+        Stany pourazowe
+      </div>
+
+      <div class="complaint-tag">
+        <span class="ct-dot"></span>
+        Stany pooperacyjne
+      </div>
+
+      <div class="complaint-tag">
+        <span class="ct-dot"></span>
+        Łokieć tenisisty
+      </div>
+
+      <div class="complaint-tag">
+        <span class="ct-dot"></span>
+        Łokieć golfisty
+      </div>
+
+    </div>
+
+    <p class="hero-urgent">
+      <strong>Jeśli tak, nie czekaj.</strong><br>
+      Każdy dzień z bólem to dzień stracony.
+    </p>
+
+    <div class="hero-btns">
+      <a href="#umow-sie" class="btn-primary">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Umów wizytę
+      </a>
+      <a href="#pierwsza-wizyta" class="btn-secondary">
+        Dowiedz się więcej
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero right — PHOTO PANEL -->
+  <div class="hero-right">
+    <div class="hero-photo">
+      <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=960&h=1280&fit=crop&crop=center" alt="Gabinet fizjoterapii Warszawa Wola terapia manualna" loading="eager" width="960" height="1280" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+      <div class="hero-photo-overlay"></div>
+    </div>
+
+    <div class="hero-float-badge2">
+      <div class="fbl2-num">5+</div>
+      <div class="fbl2-text">
+        <strong>lat doświadczenia</strong>
+        <span>w fizjoterapii</span>
+      </div>
+    </div>
+
+    <div class="hero-float-badge">
+      <div class="fbl-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.25 3.75 10.15 9 11.35C17.25 21.15 21 16.25 21 11V5L12 1zm-1 13l-3-3 1.41-1.41L11 11.17l4.59-4.58L17 8l-6 6z"/></svg>
+      </div>
+      <div class="fbl-text">
+        <strong>Certyfikowany fizjoterapeuta</strong>
+        <span>100+ zadowolonych pacjentów</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SEO TEXT BLOCK ══════════ -->
+<section style="padding:3rem 5rem; background:#fff; border-top:1px solid var(--border);" aria-label="Fizjoterapia Warszawa Wola">
+  <div style="max-width:900px; margin:0 auto;">
+    <h2 style="font-family:'Funnel Display',sans-serif; font-size:clamp(1.6rem,2.5vw,2.2rem); font-weight:700; color:var(--black); margin-bottom:1rem;">Gabinet fizjoterapii na Woli w Warszawie</h2>
+    <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.8; margin-bottom:1rem;">
+      Szukasz sprawdzonego fizjoterapeuty w Warszawie? Mój gabinet fizjoterapii znajduje się na Woli przy ul. św. Stanisława 1, 01-162 Warszawa. Oferuję profesjonalne usługi fizjoterapeutyczne dla mieszkańców Woli, Śródmieścia, Żoliborza, Ochoty i całej Warszawy. Fizjoterapia Warszawa Wola to moja specjalność.
+    </p>
+    <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.8;">
+      Fizjoterapeuta Wola Warszawa z ponad 5-letnim doświadczeniem. Leczę bóle kręgosłupa, rwę kulszową, bóle barku i kolana, dyskopatię oraz stany po urazach i operacjach. Gabinet fizjoterapii Warszawa Wola oferuje terapię manualną, masaż leczniczy, suche igłowanie, falę uderzeniową i elektroterapię. Zapraszam pacjentów z Woli i całej Warszawy.
+    </p>
+  </div>
+</section>
+
+
+<!-- ══════════ PIERWSZA WIZYTA ══════════ -->
+<section class="pierwsza-wizyta" id="pierwsza-wizyta">
+  <div class="pw-header">
+    <div class="section-eyebrow">Jak to działa?</div>
+    <h2>Jak wygląda pierwsza wizyta<br><em>cztery proste kroki</em></h2>
+  </div>
+
+  <div class="pw-grid">
+
+    <div class="pw-card">
+      <div class="pw-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.44 1.5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </div>
+      <h3>Kontakt</h3>
+      <p>Zadzwoń lub napisz. Wspólnie znajdziemy termin.</p>
+    </div>
+
+    <div class="pw-card">
+      <div class="pw-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      </div>
+      <h3>Wywiad</h3>
+      <p>Opowiedz o dolegliwościach i historii zdrowia.</p>
+    </div>
+
+    <div class="pw-card">
+      <div class="pw-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </div>
+      <h3>Diagnoza</h3>
+      <p>Badanie funkcjonalne i precyzyjna ocena problemu.</p>
+    </div>
+
+    <div class="pw-card">
+      <div class="pw-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+      </div>
+      <h3>Terapia</h3>
+      <p>Plan leczenia i pierwsze działanie już na miejscu.</p>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top:2.5rem;">
+    <a href="" class="btn-primary">Przeczytaj więcej o pierwszej wizycie</a>
+  </div>
+</section>
+
+<!-- ══════════ OFERTA ══════════ -->
+<section class="oferta" id="oferta">
+  <div class="oferta-header">
+    <div class="section-eyebrow">Co oferuję?</div>
+    <h2>Metody terapii<br><em>znajdź pomoc dla siebie</em></h2>
+  </div>
+
+  <div class="oferta-grid">
+    <a href="" class="oferta-card">
+      <div class="oferta-img"></div>
+      <div class="oferta-body">
+        <h3>Fizjoterapia</h3>
+        <p>Kompleksowa terapia ruchowa i funkcjonalna dopasowana indywidualnie do Twoich potrzeb.</p>
+        <span class="oferta-link">Dowiedz się więcej <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+
+    <a href="" class="oferta-card">
+      <div class="oferta-img"></div>
+      <div class="oferta-body">
+        <h3>Terapia Manualna</h3>
+        <p>Mobilizacje stawów i tkanek miękkich przywracające prawidłowy zakres ruchu i eliminujące ból.</p>
+        <span class="oferta-link">Dowiedz się więcej <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+
+    <a href="" class="oferta-card">
+      <div class="oferta-img"></div>
+      <div class="oferta-body">
+        <h3>Masaż</h3>
+        <p>Terapeutyczny masaż leczniczy rozluźniający napięcia mięśniowe i przyspieszający regenerację.</p>
+        <span class="oferta-link">Dowiedz się więcej <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+
+    <a href="" class="oferta-card">
+      <div class="oferta-img"></div>
+      <div class="oferta-body">
+        <h3>Suche Igłowanie</h3>
+        <p>Precyzyjna technika igłowa na punkty spustowe. Szybka ulga w bólu mięśniowym.</p>
+        <span class="oferta-link">Dowiedz się więcej <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+
+    <a href="" class="oferta-card">
+      <div class="oferta-img"></div>
+      <div class="oferta-body">
+        <h3>Fala Uderzeniowa</h3>
+        <p>Nowoczesna terapia falą akustyczną skuteczna w leczeniu entezopatii, ostrogi piętowej i tendinopatii.</p>
+        <span class="oferta-link">Dowiedz się więcej <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+
+    <a href="" class="oferta-card">
+      <div class="oferta-img"></div>
+      <div class="oferta-body">
+        <h3>Elektroterapia</h3>
+        <p>Prądy lecznicze TENS, EMS i inne wspomagające zmniejszenie bólu i poprawę funkcji nerwowo-mięśniowej.</p>
+        <span class="oferta-link">Dowiedz się więcej <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ══════════ O MNIE ══════════ -->
+<section class="o-mnie" id="o-mnie">
+  <div class="o-mnie-inner">
+
+    <!-- Zdjęcie -->
+    <div class="o-mnie-photo">
+      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&h=1067&fit=crop&crop=face" alt="Fizjoterapeuta Warszawa Wola Artur Grabowski" loading="lazy" width="800" height="1067" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    </div>
+
+    <!-- Treść -->
+    <div class="o-mnie-content">
+      <div class="section-eyebrow">O mnie</div>
+
+      <h2>Cześć, jestem<br><em>Artur.</em></h2>
+
+      <p>Jestem certyfikowanym fizjoterapeutą z ponad 5-letnim doświadczeniem klinicznym. Prowadzę gabinet fizjoterapii na warszawskiej Woli, przy ul. św. Stanisława 1. Specjalizuję się w terapii manualnej, rehabilitacji narządu ruchu oraz leczeniu bólu przewlekłego. Przyjmuję pacjentów z Woli, Śródmieścia, Żoliborza i całej Warszawy. Moim celem jest nie tylko zniwelowanie bólu, ale przede wszystkim znalezienie i wyeliminowanie jego przyczyny, abyś mógł wrócić do pełnej sprawności.</p>
+
+      <div class="o-mnie-doswiadczenie">
+        <h4>Doświadczenie</h4>
+        <div class="doswiadczenie-list">
+
+          <div class="doswiadczenie-item">
+            <div class="di-dot"></div>
+            <div class="di-text">
+              <strong>Enel-Sport</strong>
+              <span>ul. Myśliwiecka 4a, Warszawa</span>
+            </div>
+          </div>
+
+          <div class="doswiadczenie-item">
+            <div class="di-dot"></div>
+            <div class="di-text">
+              <strong>Lux-Med</strong>
+              <span>ul. Jana Pawła II 78, Warszawa</span>
+            </div>
+          </div>
+
+          <div class="doswiadczenie-item">
+            <div class="di-dot"></div>
+            <div class="di-text">
+              <strong>Arstan-Medica</strong>
+              <span>ul. Mochnackiego, Warszawa</span>
+            </div>
+          </div>
+
+          <div class="doswiadczenie-item">
+            <div class="di-dot"></div>
+            <div class="di-text">
+              <strong>Active-Clinic</strong>
+              <span>ul. Pokorna, Warszawa</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
+<section class="faq" id="faq">
+  <div class="faq-header">
+    <div class="section-eyebrow">Masz pytania?</div>
+    <h2>Najczęściej zadawane pytania<br><em>fizjoterapia Warszawa Wola</em></h2>
+  </div>
+
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Ile trwa pierwsza wizyta i jak się do niej przygotować?</span>
+        <div class="faq-icon">
+          <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </button>
+      <div class="faq-answer">
+        <p>Pierwsza wizyta trwa zazwyczaj od 60 do 90 minut. Obejmuje szczegółowy wywiad, badanie funkcjonalne oraz pierwsze działania terapeutyczne. Warto zabrać ze sobą wyniki badań obrazowych, jeśli je posiadasz, oraz wygodny strój umożliwiający swobodne ruchy.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Jak długo trwa cała terapia i ile wizyt będę potrzebować?</span>
+        <div class="faq-icon">
+          <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </button>
+      <div class="faq-answer">
+        <p>Liczba wizyt zależy od rodzaju i stopnia zaawansowania problemu. Przy ostrych bólach często wystarczy 4 do 6 sesji. W przypadku schorzeń przewlekłych terapia może trwać dłużej. Po pierwszej wizycie otrzymasz jasny plan leczenia z orientacyjną liczbą spotkań.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        <span>Czy potrzebuję skierowania od lekarza, żeby przyjść na wizytę?</span>
+        <div class="faq-icon">
+          <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </button>
+      <div class="faq-answer">
+        <p>Nie, skierowanie nie jest wymagane. Gabinet działa prywatnie, więc możesz umówić się bezpośrednio bez żadnych formalności. Jeśli jednak posiadasz dokumentację medyczną lub wyniki badań, warto je zabrać na pierwszą wizytę.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="faq-footer">
+    <a href="" class="btn-secondary">Zobacz więcej pytań</a>
+  </div>
+</section>
+
+<!-- ══════════ KONTAKT ══════════ -->
+<section class="kontakt" id="kontakt">
+
+  <!-- schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["MedicalBusiness", "Physiotherapist"],
+    "name": "Fizjoterapia Artur Grabowski",
+    "description": "Gabinet fizjoterapii w Warszawie. Specjalizacja w terapii manualnej, rehabilitacji i leczeniu bólu.",
+    "url": "https://fizjoterapia-grabowski.pl",
+    "telephone": "+48792423401",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ul. św. Stanisława 1",
+      "addressLocality": "Warszawa",
+      "postalCode": "01-162",
+      "addressCountry": "PL"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 52.2395,
+      "longitude": 20.9774
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "08:00", "closes": "12:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "08:00", "closes": "21:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "08:00", "closes": "19:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "08:00", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "08:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "07:00", "closes": "13:00" }
+    ]
+  }
+  </script>
+
+  <div class="kontakt-top">
+
+    <!-- Lewa: dane kontaktowe -->
+    <div class="kontakt-info">
+      <div class="section-eyebrow">Kontakt i rejestracja</div>
+      <h2>Fizjoterapeuta Warszawa Wola<br><em>umów wizytę</em></h2>
+
+      <div class="kontakt-details">
+        <div class="kontakt-row">
+          <div class="kontakt-row-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.44 1.5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="kontakt-row-text">
+            <strong>Telefon</strong>
+            <span>+48 792 423 401</span>
+          </div>
+        </div>
+        <div class="kontakt-row">
+          <div class="kontakt-row-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="kontakt-row-text">
+            <strong>E-mail</strong>
+            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="086367667c69637c486e617262677c6d7a69786169256f7a696a677f7b6361267864">[email&#160;protected]</a></span>
+          </div>
+        </div>
+        <div class="kontakt-row">
+          <div class="kontakt-row-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="kontakt-row-text">
+            <strong>Adres</strong>
+            <span>ul. św. Stanisława 1, 01-162 Warszawa</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="tel:+48792423401" class="btn-call">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.44 1.5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Zadzwoń, aby się umówić
+      </a>
+    </div>
+
+    <!-- Prawa: godziny -->
+    <div class="kontakt-godziny">
+      <h4>Godziny przyjęć</h4>
+      <div class="godziny-row"><span>Poniedziałek</span><span>08:00 – 12:00</span></div>
+      <div class="godziny-row"><span>Wtorek</span><span>08:00 – 21:00</span></div>
+      <div class="godziny-row"><span>Środa</span><span>08:00 – 19:00</span></div>
+      <div class="godziny-row"><span>Czwartek</span><span>08:00 – 20:00</span></div>
+      <div class="godziny-row"><span>Piątek</span><span>08:00 – 18:00</span></div>
+      <div class="godziny-row"><span>Sobota</span><span>07:00 – 13:00</span></div>
+      <div class="godziny-row"><span>Niedziela</span><span>Nieczynne</span></div>
+    </div>
+
+  </div>
+
+  <!-- Mapa na całą szerokość -->
+  <div class="kontakt-map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2442.5!2d20.9774!3d52.2395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc5de7e7f7c9%3A0x1!2sul.%20%C5%9Bw.%20Stanis%C5%82awa%201%2C%2001-162%20Warszawa!5e0!3m2!1spl!2spl!4v1"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Lokalizacja gabinetu">
+    </iframe>
+    <div class="map-btn-wrap">
+      <a href="https://maps.google.com/?q=ul.+św.+Stanisława+1,+01-162+Warszawa" target="_blank" rel="noopener" class="btn-map">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        Wyznacz trasę
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="footer-social">
+    <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+    </a>
+    <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+  </div>
+  <p>© 2025 <span>Fizjoterapia Artur Grabowski</span> · Warszawa · Wszelkie prawa zastrzeżone</p>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Hamburger toggle
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('nav');
+  hamburger.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+    const spans = hamburger.querySelectorAll('span');
+    if (open) {
+      spans[0].style.cssText = 'transform: rotate(45deg) translate(5px,5px)';
+      spans[1].style.opacity = '0';
+      spans[2].style.cssText = 'transform: rotate(-45deg) translate(5px,-5px)';
+    } else {
+      spans.forEach(s => s.style.cssText = '');
+    }
+  });
+
+  // Close nav on link click (mobile)
+  nav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.querySelectorAll('span').forEach(s => s.style.cssText = '');
+    });
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const answer = item.querySelector('.faq-answer');
+      const isOpen = item.classList.contains('open');
+      // close all
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-answer').style.maxHeight = null;
+        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      // open clicked
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Scroll header shadow
+  window.addEventListener('scroll', () => {
+    document.getElementById('header').classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+</script>
+</body>
+</html>
